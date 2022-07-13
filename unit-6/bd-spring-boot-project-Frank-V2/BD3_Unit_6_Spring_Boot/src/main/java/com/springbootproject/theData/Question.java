@@ -1,7 +1,7 @@
 package com.springbootproject.theData;
 
 public class Question {
-    private String theQuestion;   // This name must match teh attribute name in the JSON
+    private String theQuestion;   // This name must match the attribute name in the JSON
 
     public Question() {}  // default ctor used to convert to/from JSON
 

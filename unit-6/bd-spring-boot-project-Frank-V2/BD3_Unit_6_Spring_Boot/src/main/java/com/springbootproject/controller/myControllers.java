@@ -56,7 +56,7 @@ public class myControllers {
     }
 
     // Method to handle HTTP GET requests for the path "/tuesday/bd3/unit6"
-    // HttpServletRequest as the first parameter to teh method allows access to HTTP request information
+    // HttpServletRequest as the first parameter to the method allows access to HTTP request information
     //             using the object name specified
     @GetMapping(value="/tuesday/bd3/unit6")
     public String whatEverYouWant(HttpServletRequest aRequest) {
@@ -77,7 +77,7 @@ public class myControllers {
     // Method to handle HTTP POST requests for path "/ask"
     //       with data in the request body
     @PostMapping (value="/ask")
-    // HttpServletRequest as the first parameter to teh method allows access to HTTP request information
+    // HttpServletRequest as the first parameter to the method allows access to HTTP request information
     //             using the object name specified
     // @RequestBody tells the server to take the JSON from the request body of the request
     //              and instantiate an object of the class specified
@@ -125,7 +125,8 @@ public class myControllers {
     //      and the cohort parameter is optional, but if present assign to a String called cohort
     public theAnswer magic8Ball(HttpServletRequest   aRequest,
                                 @RequestParam int    unit,
-                                @RequestParam (required=false) String cohort) {
+        //                      @RequestParam String cohort) {                   // query parm is required
+                                @RequestParam (required=false) String cohort) {    // query parm is optional
         //                                    (default="value") instead of required
 
         logRequest(aRequest);   // Write HTTP request to log
